@@ -22,15 +22,8 @@ pipeline {
                         bat 'mvn clean package'
                     }
                 }
-				//bat "copy app\\target\\lab2q3-0.0.1-SNAPSHOT.jar c:\\temp\\"
             }
         }
-    //     stage("Docker build") {
-    //         steps {
-    //             echo "docker build ..." 
-				// bat 'docker build -t lab3q1 .'
-    //         }
-    //     }
         stage("Docker build") {
             steps {
                 echo "docker build ..." 
@@ -40,7 +33,7 @@ pipeline {
                 }
             }
         }
-        stage('Docker push') {
+        stage("Docker push") {
             steps{
                 script {
 					docker.withRegistry("", dockerRegistryCredential ) {
