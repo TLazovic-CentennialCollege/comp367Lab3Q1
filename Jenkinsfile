@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        dockerRegistry = "tlazovicCentennialCollege/lab3q1"
+        dockerRegistry = "tlazoviccentennialcollege/lab3q1"
         dockerRegistryCredential = "TLazovic-CentennialCollege-DockerHub"
 		dockerImage = ""
 		dockerImageBuildNumber = "latest"
